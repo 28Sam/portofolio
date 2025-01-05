@@ -1,0 +1,91 @@
+html,
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    /* Pastikan halaman memenuhi tinggi penuh viewport */
+    margin: 0;
+    /* Hilangkan margin bawaan */
+    display: flex;
+    /* Gunakan Flexbox untuk tata letak */
+    flex-direction: column;
+    /* Susun elemen secara vertikal */
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-item {
+    position: relative;
+    /* Pastikan elemen bisa diberi pseudo-elemen */
+    display: flex;
+    /* Supaya elemen di dalam sejajar secara horizontal */
+    align-items: center;
+    /* Posisikan elemen di tengah vertikal */
+}
+
+.nav-item:not(:last-child)::after {
+    content: "|";
+    /* Garis vertikal */
+    margin: 0 10px;
+    /* Jarak antara teks dan garis */
+    color: #000;
+    /* Warna garis */
+    font-size: 16px;
+    /* Ukuran garis sesuai dengan teks */
+}
+
+.nav-link {
+    text-decoration: none;
+    /* Hilangkan underline */
+    color: inherit;
+    /* Ikuti warna navbar */
+    padding: 0;
+    /* Hilangkan padding bawaan */
+}
+
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #77dd77;
+    border-radius: 50%;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.circle-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.circle-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+footer {
+    color: white;
+    margin-top: auto;
+    /* Dorong footer ke bawah */
+    padding: 10px 0;
+    /* Tambahkan sedikit padding */
+    color: white;
+    /* Sesuaikan warna teks */
+}
