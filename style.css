@@ -1,91 +1,501 @@
-html,
-body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    /* Pastikan halaman memenuhi tinggi penuh viewport */
+/* Reset CSS */
+* {
     margin: 0;
-    /* Hilangkan margin bawaan */
-    display: flex;
-    /* Gunakan Flexbox untuk tata letak */
-    flex-direction: column;
-    /* Susun elemen secara vertikal */
-}
-
-.navbar {
-    padding: 1rem 0;
-}
-
-.nav-link {
-    color: black;
-}
-
-.nav-item {
-    position: relative;
-    /* Pastikan elemen bisa diberi pseudo-elemen */
-    display: flex;
-    /* Supaya elemen di dalam sejajar secara horizontal */
-    align-items: center;
-    /* Posisikan elemen di tengah vertikal */
-}
-
-.nav-item:not(:last-child)::after {
-    content: "|";
-    /* Garis vertikal */
-    margin: 0 10px;
-    /* Jarak antara teks dan garis */
-    color: #000;
-    /* Warna garis */
-    font-size: 16px;
-    /* Ukuran garis sesuai dengan teks */
-}
-
-.nav-link {
-    text-decoration: none;
-    /* Hilangkan underline */
-    color: inherit;
-    /* Ikuti warna navbar */
     padding: 0;
-    /* Hilangkan padding bawaan */
+    box-sizing: border-box;
 }
 
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #77dd77;
-    border-radius: 50%;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.circle-btn {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+/* CSS untuk membuat posisi section tetap */
+.home {
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    flex-direction: column;
 }
 
-.circle-btn:hover {
-    transform: scale(1.05);
+/* CSS untuk membuat h1 memiliki animasi mengetiknya */
+.typed-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #ffffff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        border-right-color: #ffffff;
+    }
+
+    50% {
+        border-right-color: transparent;
+    }
+
+    100% {
+        border-right-color: #ffffff;
+    }
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* Base Skill Button Style */
+.skill-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    /* Bentuk bulat */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    /* Tidak perlu cursor pointer karena bukan link */
+    border: none;
+    color: #fff;
+}
+
+/* Warna Berbeda untuk Setiap Skill */
+.skill-btn.html {
+    background-color: #e34c26;
+    /* Warna HTML */
+}
+
+.skill-btn.css {
+    background-color: #264de4;
+    /* Warna CSS */
+}
+
+.skill-btn.js {
+    background-color: #f0db4f;
+    /* Warna JavaScript */
+    color: #333;
+    /* Teks hitam untuk kontras */
+}
+
+.skill-btn.react {
+    background-color: #61dafb;
+    /* Warna React */
+    color: #333;
+    /* Teks hitam untuk kontras */
+}
+
+.skill-btn.node {
+    background-color: #68a063;
+    /* Warna Node.js */
+}
+
+.skill-btn.figma {
+    background-color: #a259ff;
+    /* Warna Figma */
+}
+
+.skill-btn.adobe-xd {
+    background-color: #ff61f6;
+    /* Warna Adobe XD */
+}
+
+/* Efek Hover */
+.skill-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Beranda */
+.home {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.home .btn {
+    background: #ffdd57;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.home .btn:hover {
+    background: #ffc107;
+}
+
+/* Tentang Saya */
+.about {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about .text {
+    max-width: 600px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about ul {
+    list-style: none;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Proyek */
+.projects {
+    padding: 80px 0;
+    background: #f4f4f4;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Base Project Item Style */
+.project-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Memastikan gambar tidak keluar dari container */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Style untuk Gambar di dalam Project Item */
+.project-item img {
+    width: 100%;
+    /* Gambar mengisi lebar container */
+    height: auto;
+    /* Tinggi disesuaikan secara proporsional */
+    border-radius: 10px;
+    /* Sudut gambar sesuai dengan container */
+    display: block;
+    /* Menghilangkan spasi bawah yang tidak diinginkan */
     transition: transform 0.3s ease;
 }
 
+/* Efek Hover pada Gambar */
+.project-item:hover img {
+    transform: scale(1.05);
+    /* Gambar membesar sedikit saat dihover */
+}
+
+/* Style untuk Konten di dalam Project Item */
+.project-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2575fc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.project-item .btn:hover {
+    background: #1a5bbf;
+}
+
+/* CSS untuk membuat tampilan form kontak lebih menarik */
+.contact {
+    background: #f4f4f4;
+    padding: 80px 0;
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form button[type="submit"] {
+    background: #2575fc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button[type="submit"]:hover {
+    background: #1a5bbf;
+}
+
+/* Footer */
 footer {
-    color: white;
-    margin-top: auto;
-    /* Dorong footer ke bawah */
-    padding: 10px 0;
-    /* Tambahkan sedikit padding */
-    color: white;
-    /* Sesuaikan warna teks */
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+footer .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer .footer-nav {
+    margin-right: 20px;
+}
+
+footer .footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer .footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav ul li a:hover {
+    color: #ccc;
+}
+
+footer .footer-contact {
+    margin-right: 20px;
+}
+
+footer .footer-contact p {
+    margin-bottom: 10px;
+}
+
+footer .footer-social {
+    margin-right: 20px;
+}
+
+footer .footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer .footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-social ul li a:hover {
+    color: #ccc;
+}
+
+footer .footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .footer-copyright p {
+    margin-bottom: 10px;
 }

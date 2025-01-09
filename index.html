@@ -1,62 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Portofolio 28Sam</title>
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar -->
-        <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <div class="dot"></div>
-                <span class="ms-2 fw-bold">Samsudin</span>
-                <small class="ms-2 text-muted">Sedang Proses Belajar</small>
-            </div>
-            <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Research</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Outreach</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Personal</a></li>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Portofolio 28Sam</a>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Content -->
-        <div class="d-flex align-items-center mt-4">
-            <img src="Profile.jpg" alt="Profile" class="rounded-circle profile-img me-4">
-            <div>
-                <h1 class="fw-bold">Samsudin</h1>
-                <h5 class="text-muted">A Bit About Me</h5>
-                <p>
-                    I am a Carnegie-Princeton fellow working in Carnegie Observatories. I am interested in
-                    observational galaxy evolution, supermassive black holes, application of machine learning algorithms
-                    to astronomical datasets, and the interstellar medium.
-                </p>
+    <!-- Beranda -->
+    <section id="home" class="home">
+        <div class="container">
+            <h1 class="typed-text"></h1>
+            <p>Web Developer & Desainer</p>
+            <a href="#projects" class="btn">Lihat Proyek Saya</a>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Foto Profil">
+                <div class="text">
+                    <p>
+                        Halo! Saya Sam, saya seorang mahasiswa Teknik Informatika yang sedang menempuh pendidikan di
+                        Universitas Halu Oleo. Saya memiliki minat yang sangat besar terhadap dunia teknologi dan
+                        desain. Saya sedang belajar untuk menjadi seorang web developer dan desainer yang handal.
+                    </p>
+                    <h3>Keahlian Saya</h3>
+                    <div class="skills">
+                        <span class="skill-btn html">HTML</span>
+                        <span class="skill-btn css">CSS</span>
+                        <span class="skill-btn js">JavaScript</span>
+                        <span class="skill-btn react">React</span>
+                        <span class="skill-btn node">Node.js</span>
+                        <span class="skill-btn figma">Figma</span>
+                        <span class="skill-btn adobe-xd">Adobe XD</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Buttons -->
-        <div class="d-flex justify-content-start gap-4 mt-4">
-            <div class="circle-btn" style="background-color: #d9ed92;">Resume</div>
-            <div class="circle-btn" style="background-color: #f2cc8f;">Research</div>
-            <div class="circle-btn" style="background-color: #a2d2ff;">Outreach</div>
-            <div class="circle-btn" style="background-color: #bdb2ff;">Personal</div>
+    <!-- Proyek -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Proyek Saya</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="Project1.png" alt="Proyek 1">
+                    <h3>Website Rental Mobil</h3>
+                    <p>Membangun website rental mobil menggunakan Laravel11 dan Bootstrap5</p>
+                    <a href="#" class="btn">Lihat Proyek</a>
+                </div>
+                <div class="project-item">
+                    <img src="Project2.png" alt="Proyek 2">
+                    <h3>Aplikasi SIGERANA</h3>
+                    <p>Sistem Informasi Geografis Kekerasan Terhadap Perempuan Dan Anak Berbasis Web menggunakan
+                        CodeIgniter4</p>
+                    <a href="#" class="btn">Lihat Proyek</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="footer text-center bg-dark">
-        @CopyRight_2025_<i>samsudin</i>
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Hubungi Saya</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Nama Anda" required>
+                <input type="email" name="email" placeholder="Email Anda" required>
+                <textarea name="message" placeholder="Pesan Anda" required></textarea>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang Saya</a></li>
+                        <li><a href="#projects">Proyek</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <p>Alamat: Jalan Orinunggu lrg. Mahkota Sultra lrg. Binongko</p>
+                    <p>Telepon: 0822-3127-6890</p>
+                    <p>Email: <a href="mailto:example@example.com">samreke999@gmail.com</a></p>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Portofolio 28Sam<i class="fa fa-heart"></i> </p>
+            </div>
+        </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
